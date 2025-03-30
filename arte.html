@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Corpo Nell'Arte</title>
+    <style>
+        body {
+            background-color: #d3cbc1; /* Colore di sfondo */
+            margin: 0; /* Rimuove il margine predefinito */
+            height: 100vh; /* Imposta l'altezza del body */
+            overflow: hidden; /* Nasconde lo scorrimento del body */
+            display: flex; /* Usa flexbox per centrare la tendina */
+            justify-content: center; /* Centra orizzontalmente */
+            align-items: center; /* Centra verticalmente */
+        }
+
+        .transparent-box {
+            width: 30vw; /* Larghezza della tendina */
+            height: 100vh; /* Altezza totale della finestra */
+            background-color: rgba(0, 0, 0, 0.5); /* Sfondo nero semi-trasparente */
+            color: white; /* Colore del testo */
+            padding: 20px; /* Spaziatura interna */
+            border-radius: 20px; /* Angoli arrotondati */
+            text-align: center; /* Allinea il testo al centro */
+            overflow-y: auto; /* Permette lo scorrimento verticale */
+            display: flex; /* Usa flexbox per centrare il contenuto */
+            flex-direction: column; /* Dispone il contenuto in colonna */
+            justify-content: flex-start; /* Centra verticalmente */
+            align-items: center; /* Centra orizzontalmente */
+        }
+
+        h1 {
+            margin: 0; /* Rimuove il margine predefinito */
+            padding-top:20px;
+            
+        }
+
+        /* Aggiungi un po' di contenuto per testare lo scorrimento */
+        .content {
+            max-height: 80%; /* Limita l'altezza del contenuto */
+            overflow-y: auto; /* Permette lo scorrimento verticale */
+            width: 100%; /* Larghezza del contenuto */
+        }
+    </style>
+</head>
+<body>
+    <div class="transparent-box">
+        <div class="content">
+        <h1>Il Corpo Nell'Arte</h1>
+          
+        </div>
+    </div>
+</body>
+</html>

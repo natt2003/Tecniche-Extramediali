@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8"> <!-- Aggiunto per la corretta codifica dei caratteri -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Aggiunto per la responsività -->
+    <title>Tecniche Extramediali</title>
+    <style>
+        body {
+            margin: 0; /* Rimuove il margine predefinito */
+            padding: 0; /* Rimuove il padding predefinito */
+            display: flex; /* Usa flexbox per allineare il contenuto */
+        }
+
+        .sidebar {
+            width: 25vh; /* Larghezza della sidebar */
+            background-color: black; /* Colore di sfondo della sidebar */
+            height: 100vh; /* Altezza della sidebar */
+            position: fixed; /* Fissa la sidebar a sinistra */
+            top: 0; /* Posiziona la sidebar in alto */
+            left: 0; /* Posiziona la sidebar a sinistra */
+            padding-top: 20px; /* Spazio sopra il contenuto della sidebar */
+        }
+
+        .sidebar a {
+            color: white; /* Colore del testo dei link */
+            padding: 12px 16px; /* Spazio interno dei link */
+            text-decoration: none; /* Rimuove la sottolineatura */
+            display: block; /* Rende i link a blocco */
+        }
+
+        .sidebar a:hover {
+            background-color: gray; /* Colore di sfondo al passaggio del mouse */
+        }
+
+        .content {
+            margin-left: 25vh; /* Spazio per la sidebar */
+            flex-grow: 1; /* Permette al contenuto di espandersi */
+            display: flex;
+            flex-direction: column;
+            background-image: url('sfondo2.jpg'); /* Immagine di sfondo */
+            background-position: center; /* Centra l'immagine */
+            background-repeat: no-repeat; /* Non ripete l'immagine */
+            background-size: cover; /* Copre l'intera area */
+            height: 100vh; /* Altezza della sezione contenuto */
+            color: black; /* Colore del testo */
+            overflow: auto; /* Permette lo scorrimento se necessario */
+            padding: 20px; /* Spazio interno per il contenuto */
+        }
+
+        h1 {
+            margin: 0; /* Rimuove il margine predefinito */
+            padding-top: 20px; /* Spazio sopra il titolo */
+            font-size: 2.5em; /* Dimensione del font */
+            color: black; /* Colore del testo del titolo */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per migliorare la leggibilità */
+        }
+
+        @media (max-width: 768px) {
+    .content {
+        background-size: contain; /* Adatta l'immagine al contenitore senza ritagliarla */
+        background-position: center; /* Posiziona l'immagine in alto per una migliore visibilità */
+    }
+
+    h1 {
+        font-size: 1em; /* Riduce ulteriormente la dimensione del titolo su schermi piccoli */
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="arte.html">Il corpo nell'arte</a>
+        <a href="corpo.html">Il corpo nella natura</a>
+    </div>
+
+    <div class="content">
+        <h1>Il corpo: un'opera d'arte</h1>
+    </div>
+</body>
+</html>
