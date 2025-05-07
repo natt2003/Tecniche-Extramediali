@@ -1,55 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Il Corpo Nell'Arte</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Il Corpo Nell'Arte - Tendina Scrollabile</title>
     <style>
+        /* Body con sfondo fisso e senza scroll */
         body {
-            background-color: #d3cbc1; /* Colore di sfondo */
-            margin: 0; /* Rimuove il margine predefinito */
-            height: 100vh; /* Imposta l'altezza del body */
-            overflow: hidden; /* Nasconde lo scorrimento del body */
-            display: flex; /* Usa flexbox per centrare la tendina */
-            justify-content: center; /* Centra orizzontalmente */
-            align-items: center; /* Centra verticalmente */
+            margin: 0;
+            height: 100vh;
+            background-color: #d3cbc1;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .content img {
+            display: block; /* Rimuove lo spazio sotto l'immagine */
+            margin: 0 auto; /* Centra l'immagine */
+            max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
+            height: auto; /* Mantiene le proporzioni */
+            object-fit: contain; /* Mantiene le proporzioni dell'immagine */
         }
 
+        /* Scrollbar personalizzata moderna (non obbligatoria ma piacevole) */
+        .transparent-box::-webkit-scrollbar {
+            width: 8px;
+        }
+        /* Container della tendina */
         .transparent-box {
-            width: 30vw; /* Larghezza della tendina */
-            height: 100vh; /* Altezza totale della finestra */
-            background-color: rgba(0, 0, 0, 0.5); /* Sfondo nero semi-trasparente */
-            color: white; /* Colore del testo */
-            padding: 20px; /* Spaziatura interna */
-            border-radius: 20px; /* Angoli arrotondati */
-            text-align: center; /* Allinea il testo al centro */
-            overflow-y: auto; /* Permette lo scorrimento verticale */
-            display: flex; /* Usa flexbox per centrare il contenuto */
-            flex-direction: column; /* Dispone il contenuto in colonna */
-            justify-content: flex-start; /* Centra verticalmente */
-            align-items: center; /* Centra orizzontalmente */
+            width: 30vw;
+            max-width: 350px;
+            height: 80vh;
+            max-height: 600px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+
+            /* Scroll area */
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch; /* per scorrimento fluido su iOS */
         }
 
+        /* Stile interno per il testo */
         h1 {
-            margin: 0; /* Rimuove il margine predefinito */
-            padding-top:20px;
-            
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-size: 1.8rem;
         }
 
-        /* Aggiungi un po' di contenuto per testare lo scorrimento */
-        .content {
-            max-height: 80%; /* Limita l'altezza del contenuto */
-            overflow-y: auto; /* Permette lo scorrimento verticale */
-            width: 100%; /* Larghezza del contenuto */
+        .content p {
+            margin-bottom: 1em;
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+
+        /* Scrollbar personalizzata moderna (non obbligatoria ma piacevole) */
+        .transparent-box::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .transparent-box::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .transparent-box::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+        }
+
+        /* Responsive per schermi piccoli */
+        @media (max-width: 400px) {
+            .transparent-box {
+                width: 90vw;
+                max-width: none;
+                height: 70vh;
+                max-height: none;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .content p {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="transparent-box">
-        <div class="content">
+    <div class="transparent-box" role="region" aria-label="Testo scrollabile Il Corpo Nell'Arte" tabindex="0">
         <h1>Il Corpo Nell'Arte</h1>
-          
+        <div class="content">
+            <p>
+                Nel corso dei secoli, il corpo umano è stato uno dei soggetti più esplorati, studiati e celebrati nell’arte.<br>
+                Da simbolo di perfezione a strumento di espressione interiore, la rappresentazione del corpo ha assunto forme e significati diversi a seconda del periodo storico e della sensibilità dell’artista. <br>
+                Questo viaggio attraverso la storia dell’arte mostra come la valorizzazione del corpo umano sia un tema centrale, capace di riflettere idee estetiche, filosofiche e sociali.<br>
+
+            </p>
+            <p>
+                Il percorso inizia nell’antica Grecia, dove il corpo era idealizzato come emblema di armonia e perfezione.<br>
+                Fidia, celebre scultore greco del V secolo a.C., ha incarnato questa visione con le sue opere monumentali, tra cui le sculture del Partenone.<br>
+                In esse, il corpo umano è rappresentato in forme idealizzate, prive di imperfezioni, simbolo di un’umanità elevata, vicina al divino.
+                
+            </p>
+            <img src="Foto1.jpg">
+            <p>
+                Seguendo questa stessa concezione, Policleto codificò le proporzioni perfette del corpo umano nel suo celebre Doriforo, statua che incarna il canone della bellezza classica.<br>
+                L’arte greca, con la sua attenzione all’equilibrio e alla simmetria, getta le basi per una lunga tradizione di valorizzazione del corpo come misura ideale del mondo.
+            </p>
+            <img src="Foto2.jpg">
+            <p>
+                Durante il Rinascimento, questa ricerca trova nuova linfa nei lavori di Leonardo da Vinci.<br>
+                L’artista e scienziato rinascimentale dedicò anni allo studio anatomico del corpo umano, come dimostrano i suoi disegni e, soprattutto, L’Uomo Vitruviano, in cui esplora le proporzioni perfette basandosi sui testi antichi.<br>
+                Per Leonardo, il corpo è una macchina perfetta, un microcosmo che riflette l’ordine dell’universo.
+            </p>
+            <img src="Foto3.jpg">
+            <p>
+                Nel Seicento, con Gian Lorenzo Bernini, la rappresentazione del corpo umano si fa dinamica e teatrale. Le sue sculture, come Apollo e Dafne, esprimono un’intensa carica emotiva e un’energia vitale che trascende l’immobilità della materia.<br>
+                Il corpo non è più solo bello: è vivo, vibrante, capace di raccontare una storia attraverso la forma.
+            </p>
+            <img src="Foto4.jpg">
+            <p>
+                L’ideale classico ritorna nell’epoca neoclassica con Antonio Canova. Le sue sculture, come Amore e Psiche, celebrano la grazia e l’armonia del corpo umano, combinando purezza formale e sensualità.<br>
+                Canova riprende i modelli greci, ma li rielabora in chiave più intima e sentimentale.
+            </p>
+            <img src="Foto13.jpg">
+            <p>
+                Con Auguste Rodin, nell’Ottocento, il corpo acquista una nuova fisicità.<br>
+                Opere come Il Pensatore e Il Bacio esprimono emozioni profonde e tensioni interiori attraverso la materia scolpita.<br>
+                Rodin restituisce al corpo una verità più umana, fatta di muscoli contratti, gesti intensi e imperfezioni che comunicano l’anima.
+            </p>
+
+            <img src="Foto5.jpg">
+            <img src="Foto6.jpg">
+
+            <p>
+                Il Novecento rompe definitivamente con gli ideali di perfezione.<br>
+                Egon Schiele esplora il corpo in modo crudo e psicologico: i suoi disegni nervosi e inquieti mostrano corpi contorti, fragili, in bilico tra desiderio e sofferenza. <br>
+                È un’esplorazione dell’identità attraverso il corpo, lontana da ogni estetizzazione.
+            </p>
+            <img src="Foto7.jpg">
+            <p>
+                Allo stesso modo, Lucian Freud propone ritratti realistici che mettono a nudo la fisicità e la vulnerabilità dei suoi soggetti. <br>
+                Le sue pennellate dense raccontano la carne, l’età, l’imperfezione: il corpo non più come simbolo, ma come realtà da affrontare.
+            </p>
+            <img src="Foto9.jpg">
+            <p>
+                Robert Mapplethorpe ha fotografato il corpo umano in modo scultoreo, esaltandone la forma e la sensualità.<br>
+                Le sue immagini giocano con il contrasto tra luce e ombra, trasformando il corpo in un’opera d’arte vivente, capace di trasmettere una potente estetica visiva.
+            </p>
+            <img src="Foto10.jpg">
+            <p>
+                Jenny Saville porta avanti questa riflessione con opere provocatorie che sfidano gli stereotipi di bellezza.<br>
+                I suoi corpi voluminosi e carnali occupano la tela con forza, imponendo una nuova visione del femminile e del corporeo, lontana dalle immagini patinate della cultura di massa.
+            </p>
+            <img src="Foto11.jpg">
+            <p>
+                Infine, Vanessa Beecroft, attraverso i suoi *tableaux vivants*, utilizza corpi reali disposti in composizioni sceniche per interrogare lo spettatore sul ruolo del corpo nella società contemporanea. <br>
+                Le sue performance trasformano il corpo in un linguaggio visivo potente, capace di evocare bellezza, controllo, alienazione e desiderio.
+            </p>
+            <img src="Foto12.jpg">
+            <p>
+                In conclusione, la valorizzazione del corpo umano nell’arte è un tema che ha attraversato i secoli mutando forma e significato. <br>
+                Dall’ideale alla realtà, dalla perfezione alla vulnerabilità, il corpo resta protagonista assoluto, specchio dell’anima e della società, strumento privilegiato per esprimere la complessità dell’esperienza umana.
+            </p>
         </div>
     </div>
 </body>
 </html>
+</content>
+</create_file>
