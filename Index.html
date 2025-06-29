@@ -55,16 +55,23 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ombra per migliorare la leggibilità */
         }
 
-        @media (max-width: 768px) {
-    .content {
-        background-size: contain; /* Adatta l'immagine al contenitore senza ritagliarla */
-        background-position: center; /* Posiziona l'immagine in alto per una migliore visibilità */
-    }
+         @media (max-width: 400px) {
+            .transparent-box {
+                width: 90vw;
+                max-width: none;
+                height: 70vh;
+                max-height: none;
+                padding: 15px;
+            }
 
-    h1 {
-        font-size: 1em; /* Riduce ulteriormente la dimensione del titolo su schermi piccoli */
-    }
-}
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .content p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
