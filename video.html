@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <title>Il Corpo Nell'Arte - Tendina Scrollabile</title>
+    <style>
+        /* Body con sfondo fisso e senza scroll */
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: #d3cbc1;
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .content img {
+            display: block; /* Rimuove lo spazio sotto l'immagine */
+            margin: 0 auto; /* Centra l'immagine */
+            max-width: 100%; /* Assicura che l'immagine non superi la larghezza del contenitore */
+            height: auto; /* Mantiene le proporzioni */
+            object-fit: contain; /* Mantiene le proporzioni dell'immagine */
+        }
+
+        /* Scrollbar personalizzata moderna (non obbligatoria ma piacevole) */
+        .transparent-box::-webkit-scrollbar {
+            width: 8px;
+        }
+        /* Container della tendina */
+        .transparent-box {
+            width: 30vw;
+            max-width: 350px;
+            height: 80vh;
+            max-height: 600px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+            color: #fff;
+            padding: 20px;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+
+            /* Scroll area */
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch; /* per scorrimento fluido su iOS */
+        }
+
+        /* Stile interno per il testo */
+        h1 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-size: 1.8rem;
+        }
+
+        .content p {
+            margin-bottom: 1em;
+            line-height: 1.5;
+            font-size: 1rem;
+        }
+
+        /* Scrollbar personalizzata moderna (non obbligatoria ma piacevole) */
+        .transparent-box::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .transparent-box::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+
+        .transparent-box::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 10px;
+        }
+
+        /* Responsive per schermi piccoli */
+        @media (max-width: 400px) {
+            .transparent-box {
+                width: 90vw;
+                max-width: none;
+                height: 70vh;
+                max-height: none;
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            .content p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>      
+    <body>
+        <div class="transparent-box" role="region" aria-label="Testo scrollabile Il Corpo Nell'Arte" tabindex="0">
+        <h1>Memesi corpo/natura</h1>
+        <div class="content">
+          
+            
+            <p>
+            Il progetto che presento nasce dal desiderio di valorizzare le somiglianze tra la natura e il corpo umano, evidenziando come le forme e le strutture del nostro organismo trovino rispecchiamenti nel mondo naturale. <br>
+            Attraverso una serie di video, ho cercato di catturare queste connessioni, mostrando come elementi naturali possano evocare parti del corpo umano e viceversa.
+           </p>
+
+            <video width="320" height="240" controls>
+            <source src="video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video> 
+        </div>
+        </div>
+
+     </body> 
